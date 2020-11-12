@@ -1,8 +1,4 @@
-class NegociacoesView {
-    constructor(seletor) {
-        this._elemento = document.querySelector(seletor);
-    }
-
+class NegociacoesView extends View {
 
     update(model) {
         this._elemento.innerHTML = this.template(model);
@@ -35,7 +31,7 @@ class NegociacoesView {
 
                 <tfoot>
                     <tr>
-                        <td colspan="3"></td>
+                        <td colspan="3"><b>TOTAL:</b></td>
                         <td>${model.volumeTotal}</td>
                     </tr>
                 </tfoot>
